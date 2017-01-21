@@ -1,0 +1,49 @@
+*~
+# Gradle
+# ------
+.DS_Store
+.gradle
+**/bin/**
+**/build/**
+!**/src/**/build/**
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Cache of project
+.gradletasknamecache
+
+target/
+*.jar
+*.war
+*.ear
+*.class
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!**/gradle-wrapper.jar
+
+# eclipse specific git ignore
+*.pydevproject
+.project
+.classpath
+.springBeans
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*.log
+*~.nib
+local.properties
+.meta/
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+

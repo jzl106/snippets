@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+	<bean id="properties"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<value>classpath:/config.properties</value>
+		</property>
+	</bean>
+	<bean id="Math" class="com.baeldung.snippets.Math" />
+	<bean id="Student" class="com.baeldung.snippets.Student">
+		<property name="name" value="${student.name}" />
+		<property name="courseTaken" ref="Math" />
+	</bean>
+	<bean id="Instructor" class="com.baeldung.snippets.Instructor">
+		<constructor-arg value="${instructor.name}" />
+		<constructor-arg ref="Math" />
+	</bean>
+</beans>

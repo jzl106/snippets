@@ -1,0 +1,11 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile group: 'org.springframework', name: 'spring-context-support', version: '4.3.5.RELEASE'
+}
+
